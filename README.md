@@ -1,6 +1,14 @@
 # JS-Scroll-Acceleration    
 Requires jQuery and it can be used to check the scrolling acceleration of a mousewheel or touchmove event.
 
+# How to include
+```
+<head>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="js-scroll-acceleration_1.0.0.js"></script>
+</head>
+```
+
 # Example of usage
 In this example the js-scroll-acceleration library has been used to close an Elementor Pop-up when the mouse wheel or a touch move event occured on the area of the pop-pup and to prevent the scrolling of the below content area.
 ```
