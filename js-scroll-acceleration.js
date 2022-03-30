@@ -1,4 +1,12 @@
+/**
+ * 
+ * @param area 
+ * @param interval 
+ */
 function ScrollAcceleration(area, interval){
+
+    console.log('Listening scroll on:', area);
+    console.log('Check scroll interval:', interval);
 
     var scrollAcceleration = {
         area: area,
@@ -7,8 +15,7 @@ function ScrollAcceleration(area, interval){
         prevScroll: 0,
         startAcceleration: 0,
         prevAcceleration: 0,
-        currentAcceleration: 0,
-        wheeling: false
+        currentAcceleration: 0
     }
 
     jQuery(area).on('mousewheel touchmove', function (e) {
@@ -30,7 +37,6 @@ function ScrollAcceleration(area, interval){
             // if nextDelta is  
             if( scrollAcceleration.currentAcceleration == 0 ){
                 setTimeout(function(){
-                    scrollAcceleration.wheeling = false;
                     jQuery(document).trigger( 'on_scroll_stop');
                 }, interval);
             }
